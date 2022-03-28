@@ -3,18 +3,18 @@
 " Maintainer:   Rafał Camlet <raf.camlet@gmail.com>
 " License:      GNU General Public License v3.0
 
-if exists('g:loaded_whid') | finish | endif " prevent loading file twice
+if exists('g:loaded_vimgenda') | finish | endif " prevent loading file twice
 
 let s:save_cpo = &cpo
 set cpo&vim
 
-hi def link WhidHeader      Number
-hi def link WhidSubHeader   Identifier
-" hi WhidCursorLine ctermbg=238 cterm=none
+hi def link vimgendaHeader      Number
+hi def link vimgendaSubHeader   Identifier
+" hi vimgendaCursorLine ctermbg=238 cterm=none
 
-command! Whid lua require'whid'.whid()
+command! Vimgenda lua require'vimgenda'.vimgenda()
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-let g:loaded_whid = 1
+let g:loaded_vimgenda = 1
